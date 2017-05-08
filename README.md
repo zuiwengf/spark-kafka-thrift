@@ -1,5 +1,11 @@
 # spark-kafka-thrift
 
+A prototype Spark streaming (micro-batch) app that consumes event data from Kafka and then performs some processing (i.e. schema validation or translation if necessary).  Finally, the app can expose a thrift server JDBC endpoint allowing a user or process to query via SQL the Kafka event data. 
+
+Possible Use-cases:
+[x] live scoring machine learning framework in Spark that listens for prediction requests on Kafka, computes the prediction within Spark, and posts the result
+[x] near real-time BI reporting via the Thrift JDBC SQL endpoint 
+
 ### Kafka Stream
 
 ```scala
